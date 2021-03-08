@@ -1,0 +1,34 @@
+{
+  "name": "fico7489/laravel-paginator-helper",
+  "description": "Laravel paginator helper",
+  "keywords": [
+    "laravel",
+    "Laravel paginator",
+    "Laravel paginator helper"
+  ],
+  "homepage": "https://github.com/fico7489/LaravelPaginatorHelper",
+  "support": {
+    "issues": "https://github.com/fico7489/LaravelPaginatorHelper/issues",
+    "source": "https://github.com/fico7489/LaravelPaginatorHelper"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Filip Horvat",
+      "email": "fico7489@gmail.com",
+      "homepage": "https://github.com/fico7489",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "illuminate/pagination": "^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fico7489\\LaravelPaginatorHeper\\": "src"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
