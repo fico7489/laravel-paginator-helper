@@ -1,7 +1,8 @@
 <?php
 
-namespace Fico7489\LaravelPaginatorHeper;
+namespace App\Services;
 
+use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class PaginatorHelper
@@ -12,11 +13,11 @@ class PaginatorHelper
     public $before;
     public $after;
 
-    public function __construct(LengthAwarePaginator $lengthAwarePaginator, int $offset = 3)
+    public function __construct(LengthAwarePaginator $lengthAwarePaginator, Request $request, int $offset = 3)
     {
         $this->lengthAwarePaginator = $lengthAwarePaginator;
+        $this->request = $request;
         $this->offset = $offset;
-        $this->request = request();
     }
 
     public function getPreviousUrl()
@@ -31,7 +32,7 @@ class PaginatorHelper
 
     public function getPageUrl($page)
     {
-        return $this->lengthAwarePaginator->appends(request()->all())->url($page);
+        return $this->lengthAwarePaginator->appends($this->request->all())->url($page);
     }
 
     public function isVisibleBeforeDots($page)
@@ -63,7 +64,7 @@ class PaginatorHelper
             2 == $page ||
             $page == $this->lengthAwarePaginator->lastPage() ||
             $page == ($this->lengthAwarePaginator->lastPage() - 1) ||
-            $page > ($this->lengthAwarePaginator->currentPage() - $this->offset) && $page < ($this->lengthAwarePaginator->currentPage() + $this->offset);
+            ($page > ($this->lengthAwarePaginator->currentPage() - $this->offset) && $page < ($this->lengthAwarePaginator->currentPage() + $this->offset));
     }
 
     public function isCurrentPage($page)
