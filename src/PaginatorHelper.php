@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace Fico7489\LaravelPaginatorHeper;
 
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
