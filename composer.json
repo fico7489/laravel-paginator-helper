@@ -6,10 +6,10 @@
     "Laravel paginator",
     "Laravel paginator helper"
   ],
-  "homepage": "https://github.com/fico7489/LaravelPaginatorHelper",
+  "homepage": "https://github.com/fico7489/laravel-paginator-helper",
   "support": {
-    "issues": "https://github.com/fico7489/LaravelPaginatorHelper/issues",
-    "source": "https://github.com/fico7489/LaravelPaginatorHelper"
+    "issues": "https://github.com/fico7489/laravel-paginator-helper/issues",
+    "source": "https://github.com/fico7489/laravel-paginator-helper"
   },
   "license": "MIT",
   "authors": [
